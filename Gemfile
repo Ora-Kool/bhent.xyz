@@ -19,6 +19,14 @@ gem 'coffee-rails', '~> 4.2'
 #foundation gem for front end development
 gem 'foundation-rails'
 
+gem 'will_paginate'
+gem 'bootstrap-will_paginate'
+
+#secured password
+gem 'bcrypt'
+
+gem 'paperclip'
+
 #Device gem used for authenticating admin
 gem 'devise'
 

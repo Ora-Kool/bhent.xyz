@@ -31,7 +31,6 @@
 
           </li>-->
       
-
     </ul>
 
   </div>
@@ -39,11 +38,35 @@
   <div class="top-bar-right">
 
     <ul class="menu" data-responsive-menu="drilldown medium-dropdown">
+      
+  
+    <% if logged_in?%>
       <li><a href="#">AGENCY</a></li>
       <li><a href="#">PORTFOLIO</a></li>
       <li><a href="#">ENJOY BRANDING</a></li>
-      <li><a href="#">BLOG</a></li>
+      <li><%= link_to "BLOG", admin_blogs_path(current_admin)%></li>
       <li><a href="#">SUPPORT</a></li>
+      <li class="has-submenu">
+
+           <%= link_to current_admin.name.upcase, '#' %>
+
+            <ul class="submenu menu vertical" data-submenu>
+              <li><%= link_to "Dasboard", current_admin%></li>
+              <li><%= link_to "Comment", "#"%></li>
+              <li><%= link_to "Blog", admin_blogs_path(current_admin)%></li>
+              <li><%= link_to "Portfolio", "#"%></li>
+              <li><%= link_to "Logout", logout_path, method: "delete" %></li>
+            </ul>
+
+      </li>
+      <%else%>
+      <li><a href="#">AGENCY</a></li>
+      <li><a href="#">PORTFOLIO</a></li>
+      <li><a href="#">ENJOY BRANDING</a></li>
+      <li><%= link_to "BLOG", blog_path%></li>
+      <li><a href="#">SUPPORT</a></li>
+    <%end%>
+      
 
     </ul>
 

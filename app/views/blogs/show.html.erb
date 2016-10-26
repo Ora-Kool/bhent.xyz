@@ -1,0 +1,22 @@
+<%provide(:title, @blog.title) %>
+
+<div class="row">
+<p><%= link_to "All articles", admin_blogs_path(@admin) %></p>
+<div class="large-12 columns" style="margin-bottom: 10px">
+ 	<h1><%= @blog.title %></h1>
+</div>
+
+<div class="large-7 columns">
+    <%= image_tag(@blog.image.url) %>
+</div>
+
+ 	<div class="large-10 columns">
+ 		<p><%= @blog.description %></p>
+	 </div>
+<div class="large-12 columns">
+ <p><%= link_to "All articles", admin_blogs_path(@admin) %></p>
+ </div>
+</div>
+
+
+

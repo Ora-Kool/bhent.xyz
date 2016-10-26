@@ -1,0 +1,17 @@
+<%= form_for @blog, url: admin_blogs_path, html: { multipart: true } do |f| %>
+	<%= render 'blogs/shared/error_messages' %>
+	<%= f.label "article image" %>
+	<%= f.file_field :image %>
+
+	<%= f.label :title %>
+	<%= f.text_field :title %>
+
+	<%= f.label :description %>
+	<%= f.text_area :description, size: '10x10' %>
+
+<div style="text-align: center">
+	<%= f.submit "Upload article", class: "button large-7" %>
+</div>
+
+<%end%>
+

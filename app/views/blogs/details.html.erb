@@ -1,0 +1,8 @@
+<%provide(:title, @blog.title) %>
+<div class="large-12">
+	<%= image_tag(@blog.image.url) %>
+</div>
+
+<%= @blog.title %>
+<%= @blog.description %><br>
+<%= link_to "All articles", blog_path %>
