@@ -41,8 +41,8 @@
       
   
     <% if logged_in?%>
-      <li><a href="#">AGENCY</a></li>
-      <li><a href="#">PORTFOLIO</a></li>
+      <li><%= link_to 'AGENCY', agency_path%></li>
+      <li><%= link_to 'PORTFOLIO', portfolio_path%></li>
       <li><a href="#">ENJOY BRANDING</a></li>
       <li><%= link_to "BLOG", admin_blogs_path(current_admin)%></li>
       <li><a href="#">SUPPORT</a></li>
@@ -60,11 +60,11 @@
 
       </li>
       <%else%>
-      <li><a href="#">AGENCY</a></li>
-      <li><a href="#">PORTFOLIO</a></li>
+      <li><%= link_to 'AGENCY', agency_path%></li>
+      <li><%= link_to 'PORTFOLIO', portfolio_path%></li>
       <li><a href="#">ENJOY BRANDING</a></li>
       <li><%= link_to "BLOG", blog_path%></li>
-      <li><a href="#">SUPPORT</a></li>
+      <li><%= link_to 'SUPPORT', support_path%></li>
     <%end%>
       
 

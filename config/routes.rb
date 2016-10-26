@@ -7,6 +7,9 @@ Rails.application.routes.draw do
   	get '/admin/signup', to: 'admins#new'
   	post '/admin/signup', to: 'admins#create'
   	get '/blog', to: 'home#blog'
+    get '/agency', to: 'home#agency'
+    get '/portfolio', to: 'home#portfolio'
+    get '/support', to: 'home#support'
 
     get '/blog/:id', to: 'blogs#details', as: "more_details"
 

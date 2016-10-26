@@ -10,14 +10,21 @@
 
 <% @blogs.each do |blog| %>
 <div class="large-12 columns">
-	<%= link_to  image_tag('brand.png'), more_details_path(blog) %>
+	<%= link_to  image_tag(blog.image.url), admin_blog_path(blog.admin_id, blog) %>
 		
-		<h4><%= blog.title %></h4>
-		<hr>
-		<h4>description here</h4>
+		<h4 style="margin-top: 10px;">
+		<%= blog.title %>
+			
+		</h4>
+		<hr style="margin-top: 0">
+
 		<p>
 			<%= blog.description %>
 		</p>
+		<hr>
+		<p style="font-size: 12px">BY <%= link_to blog.admin.name.upcase, '#'%> <span>|</span> <%= blog.created_at.strftime("%B %d, %Y").upcase%> </p>
+		<hr style="margin-top: 1px">
+		
 	</div>
 
 
